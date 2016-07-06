@@ -47,5 +47,14 @@ namespace UnitTestProject1
         {
             AssertPositionInArray(2, 5, new int[3] { 1, 3, 5 });
         }
+
+        [TestMethod]
+        public void TestThreeElementsArrayWithoutNumberDoesNotFindIt()
+        {
+            AssertPositionInArray(-1, 0, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(-1, 2, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(-1, 4, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(-1, 6, new int[3] { 1, 3, 5 });
+        }
     }
 }
