@@ -7,6 +7,11 @@ namespace UnitTestProject1
     [TestClass]
     public class KarateChopTests
     {
+        private static void AssertPositionInArray(int position, int number, int[] numbers)
+        {
+            Assert.AreEqual(position, new KarateChop().Chop(number, numbers));
+        }
+
         [TestMethod]
         public void TestEmptyArrayDoesNotFindNumber()
         {
@@ -37,9 +42,10 @@ namespace UnitTestProject1
             AssertPositionInArray(1,3, new int[3] { 1, 3, 5 });
         }
 
-        private static void AssertPositionInArray(int position, int number, int[] numbers)
+        [TestMethod]
+        public void TestMultipleElementsArrayWithNumberOnLastPositionFindsNumber()
         {
-            Assert.AreEqual(position, new KarateChop().Chop(number, numbers));
+            //AssertPositionInArray(2, 5, new int[3] { 1, 3, 5 });
         }
     }
 }

@@ -18,11 +18,17 @@ namespace WpfApplication1
             if (numbers[half] == number)
             {
                 return half;
-            } 
-
-            if(numbers.Length >= 1)
+            }
+            else
             {
-                return numbers[0] == number ? 0 : -1;
+                if(numbers[half] > number)
+                {
+                    half = half / 2;
+                    if (numbers[half] == number)
+                    {
+                        return half;
+                    }
+                }
             }
 
             return -1;
