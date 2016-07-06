@@ -50,13 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="KarateChopTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfApplication1\WpfApplication1.csproj">
+    <ProjectReference Include="..\WpfApplication1\KarateChop.csproj">
       <Project>{58aba264-1445-49fe-b81a-b7770bacb846}</Project>
-      <Name>WpfApplication1</Name>
+      <Name>KarateChop</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

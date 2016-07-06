@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{58ABA264-1445-49FE-B81A-B7770BACB846}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarateChop", "WpfApplication1\KarateChop.csproj", "{58ABA264-1445-49FE-B81A-B7770BACB846}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{27432C35-251F-45D3-9371-C33489BE7D3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarateChopTests", "UnitTestProject1\KarateChopTests.csproj", "{27432C35-251F-45D3-9371-C33489BE7D3F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{58ABA264-1445-49FE-B81A-B7770BACB846} = {58ABA264-1445-49FE-B81A-B7770BACB846}
 	EndProjectSection

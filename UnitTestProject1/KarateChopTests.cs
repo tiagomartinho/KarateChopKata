@@ -5,7 +5,7 @@ using WpfApplication1;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class KarateChopTests
     {
         [TestMethod]
         public void TestEmptyArrayDoesNotFindNumber()
