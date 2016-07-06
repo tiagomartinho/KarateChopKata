@@ -45,7 +45,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMultipleElementsArrayWithNumberOnLastPositionFindsNumber()
         {
-            //AssertPositionInArray(2, 5, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(2, 5, new int[3] { 1, 3, 5 });
         }
     }
 }

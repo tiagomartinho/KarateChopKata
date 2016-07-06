@@ -9,22 +9,24 @@ namespace WpfApplication1
     public class KarateChop
     {
         public int Chop(int number, int[] numbers) {
-            if(numbers.Length == 0)
-            {
-                return -1;
-            }
-
             int half = numbers.Length / 2;
-            if (numbers[half] == number)
+            if (half < numbers.Length && numbers[half] == number)
             {
                 return half;
             }
             else
             {
-                if(numbers[half] > number)
+                if(half < numbers.Length && numbers[half] > number)
                 {
                     half = half / 2;
                     if (numbers[half] == number)
+                    {
+                        return half;
+                    }
+                } else
+                {
+                    half = half + (half / 2) + 1;
+                    if (half < numbers.Length && numbers[half] == number)
                     {
                         return half;
                     }
