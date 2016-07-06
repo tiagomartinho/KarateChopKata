@@ -10,25 +10,36 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestEmptyArrayDoesNotFindNumber()
         {
-            Assert.AreEqual(-1, new KarateChop().Chop(3, new int[0] {}));
+            AssertPositionInArray(-1, 3, new int[0] { });
         }
 
         [TestMethod]
         public void TestArrayWithoutNumberDoesNotFindNumber()
         {
-            Assert.AreEqual(-1, new KarateChop().Chop(3, new int[1] {1}));
+            AssertPositionInArray(-1, 3, new int[1] { 1 });
         }
 
         [TestMethod]
         public void TestOneElementArrayWithNumberFindsNumber()
         {
-            Assert.AreEqual(0, new KarateChop().Chop(1, new int[1] {1}));
+            AssertPositionInArray(0, 1, new int[1] { 1 });
         }
 
         [TestMethod]
-        public void TestMultipleElementsArrayWithNumberFindsNumber()
+        public void TestMultipleElementsArrayWithNumberOnFirstPositionFindsNumber()
         {
-            Assert.AreEqual(0, new KarateChop().Chop(1, new int[3] { 1, 3 , 5 }));
+            AssertPositionInArray(0, 1, new int[3] { 1, 3, 5 });
+        }
+
+        [TestMethod]
+        public void TestMultipleElementsArrayWithNumberOnSecondPositionFindsNumber()
+        {
+            AssertPositionInArray(1,3, new int[3] { 1, 3, 5 });
+        }
+
+        private static void AssertPositionInArray(int position, int number, int[] numbers)
+        {
+            Assert.AreEqual(position, new KarateChop().Chop(number, numbers));
         }
     }
 }
