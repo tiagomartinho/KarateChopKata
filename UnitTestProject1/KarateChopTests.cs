@@ -31,9 +31,15 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestMultipleElementsArrayWithNumberOnFirstPositionFindsNumber()
+        public void TestOddElementsArrayWithNumberOnFirstPositionFindsNumber()
         {
             AssertPositionInArray(0, 1, new int[3] { 1, 3, 5 });
+        }
+
+        [TestMethod]
+        public void TestEvenElementsArrayWithNumberOnFirstPositionFindsNumber()
+        {
+            AssertPositionInArray(0, 1, new int[4] { 1, 3, 5, 7 });
         }
 
         [TestMethod]

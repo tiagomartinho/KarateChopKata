@@ -10,29 +10,32 @@ namespace WpfApplication1
     {
         public int Chop(int number, int[] numbers) {
             int half = numbers.Length / 2;
-            if (half < numbers.Length && numbers[half] == number)
+            for (int i = 0; i < 2; i++)
             {
-                return half;
-            }
-            else
-            {
-                if(half < numbers.Length && numbers[half] > number)
+                if (half < numbers.Length && numbers[half] == number)
                 {
-                    half = half / 2;
-                    if (numbers[half] == number)
+                    return half;
+                }
+                else
+                {
+                    if (half < numbers.Length && numbers[half] > number)
                     {
-                        return half;
+                        half = half / 2;
+                        if (numbers[half] == number)
+                        {
+                            return half;
+                        }
                     }
-                } else
-                {
-                    half = half + (half / 2) + 1;
-                    if (half < numbers.Length && numbers[half] == number)
+                    else
                     {
-                        return half;
+                        half = half + (half / 2) + 1;
+                        if (half < numbers.Length && numbers[half] == number)
+                        {
+                            return half;
+                        }
                     }
                 }
             }
-
             return -1;
         }
     }
