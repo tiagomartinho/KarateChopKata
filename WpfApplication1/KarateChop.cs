@@ -9,7 +9,7 @@ namespace WpfApplication1
     public class KarateChop
     {
         public int Chop(int number, int[] numbers) {
-            if(numbers.Length == 1)
+            if(numbers.Length >= 1)
             {
                 return numbers[0] == number ? 0 : -1;
             }

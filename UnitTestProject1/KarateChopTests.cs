@@ -10,7 +10,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestEmptyArrayDoesNotFindNumber()
         {
-            Assert.AreEqual(-1, new KarateChop().Chop(3, new int[0] { }));
+            Assert.AreEqual(-1, new KarateChop().Chop(3, new int[0] {}));
         }
 
         [TestMethod]
@@ -20,9 +20,15 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestArrayWithNumberFindsNumber()
+        public void TestOneElementArrayWithNumberFindsNumber()
         {
-            Assert.AreEqual(0, new KarateChop().Chop(1, new int[1] { 1 }));
+            Assert.AreEqual(0, new KarateChop().Chop(1, new int[1] {1}));
+        }
+
+        [TestMethod]
+        public void TestMultipleElementsArrayWithNumberFindsNumber()
+        {
+            Assert.AreEqual(0, new KarateChop().Chop(1, new int[3] { 1, 3 , 5 }));
         }
     }
 }
