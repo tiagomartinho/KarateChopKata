@@ -73,12 +73,22 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestThreeElementsArrayWithoutNumberDoesNotFindIt()
+        public void TestOddElementsArrayWithoutNumberDoesNotFindIt()
         {
             AssertPositionInArray(-1, 0, new int[] { 1, 3, 5 });
             AssertPositionInArray(-1, 2, new int[] { 1, 3, 5 });
             AssertPositionInArray(-1, 4, new int[] { 1, 3, 5 });
             AssertPositionInArray(-1, 6, new int[] { 1, 3, 5 });
+        }
+
+        [TestMethod]
+        public void TestEvenElementsArrayWithoutNumberDoesNotFindIt()
+        {
+            AssertPositionInArray(-1, 0, new int[] { 1, 3, 5, 7 });
+            AssertPositionInArray(-1, 2, new int[] { 1, 3, 5, 7 });
+            AssertPositionInArray(-1, 4, new int[] { 1, 3, 5, 7 });
+            AssertPositionInArray(-1, 6, new int[] { 1, 3, 5, 7 });
+            AssertPositionInArray(-1, 8, new int[] { 1, 3, 5, 7 });
         }
     }
 }
