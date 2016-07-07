@@ -15,52 +15,58 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestEmptyArrayDoesNotFindNumber()
         {
-            AssertPositionInArray(-1, 3, new int[0] { });
+            AssertPositionInArray(-1, 3, new int[] { });
         }
 
         [TestMethod]
         public void TestArrayWithoutNumberDoesNotFindNumber()
         {
-            AssertPositionInArray(-1, 3, new int[1] { 1 });
+            AssertPositionInArray(-1, 3, new int[] { 1 });
         }
 
         [TestMethod]
         public void TestOneElementArrayWithNumberFindsNumber()
         {
-            AssertPositionInArray(0, 1, new int[1] { 1 });
+            AssertPositionInArray(0, 1, new int[] { 1 });
         }
 
         [TestMethod]
         public void TestOddElementsArrayWithNumberOnFirstPositionFindsNumber()
         {
-            AssertPositionInArray(0, 1, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(0, 1, new int[] { 1, 3, 5 });
         }
 
         [TestMethod]
         public void TestEvenElementsArrayWithNumberOnFirstPositionFindsNumber()
         {
-            AssertPositionInArray(0, 1, new int[4] { 1, 3, 5, 7 });
+            AssertPositionInArray(0, 1, new int[] { 1, 3, 5, 7 });
         }
 
         [TestMethod]
-        public void TestMultipleElementsArrayWithNumberOnSecondPositionFindsNumber()
+        public void TestOddElementsArrayWithNumberOnSecondPositionFindsNumber()
         {
-            AssertPositionInArray(1,3, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(1,3, new int[] { 1, 3, 5 });
+        }
+
+        [TestMethod]
+        public void TestEvenElementsArrayWithNumberOnSecondPositionFindsNumber()
+        {
+            AssertPositionInArray(1, 3, new int[] { 1, 3, 5, 7 });
         }
 
         [TestMethod]
         public void TestMultipleElementsArrayWithNumberOnLastPositionFindsNumber()
         {
-            AssertPositionInArray(2, 5, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(2, 5, new int[] { 1, 3, 5 });
         }
 
         [TestMethod]
         public void TestThreeElementsArrayWithoutNumberDoesNotFindIt()
         {
-            AssertPositionInArray(-1, 0, new int[3] { 1, 3, 5 });
-            AssertPositionInArray(-1, 2, new int[3] { 1, 3, 5 });
-            AssertPositionInArray(-1, 4, new int[3] { 1, 3, 5 });
-            AssertPositionInArray(-1, 6, new int[3] { 1, 3, 5 });
+            AssertPositionInArray(-1, 0, new int[] { 1, 3, 5 });
+            AssertPositionInArray(-1, 2, new int[] { 1, 3, 5 });
+            AssertPositionInArray(-1, 4, new int[] { 1, 3, 5 });
+            AssertPositionInArray(-1, 6, new int[] { 1, 3, 5 });
         }
     }
 }
