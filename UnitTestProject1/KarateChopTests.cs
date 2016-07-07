@@ -55,9 +55,21 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestMultipleElementsArrayWithNumberOnLastPositionFindsNumber()
+        public void TestEvenElementsArrayWithNumberOnThirdPositionFindsNumber()
+        {
+            AssertPositionInArray(2, 5, new int[] { 1, 3, 5, 7 });
+        }
+
+        [TestMethod]
+        public void TestOddElementsArrayWithNumberOnLastPositionFindsNumber()
         {
             AssertPositionInArray(2, 5, new int[] { 1, 3, 5 });
+        }
+
+        [TestMethod]
+        public void TestEvenElementsArrayWithNumberOnLastPositionFindsNumber()
+        {
+            AssertPositionInArray(3, 7, new int[] { 1, 3, 5, 7 });
         }
 
         [TestMethod]
